@@ -8,6 +8,10 @@
     --line-color: #dddddd;
 }
 
+/* 
+1290 + 16*2 = 1322
+ */
+
 
 html {
     font-size: 62.5%;
@@ -20,12 +24,25 @@ body {
 }
 
 .inner {
-    max-width: 1290px;
+    max-width: 132.2rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+.f_inner {
+    display: flex;
+    gap: 3rem;
+    max-width: 132.2rem;
+    padding: 0 1.6rem;
     margin: 0 auto;
 }
 
+.f_inner>* {
+    flex: 1;
+}
+
 .ms {
-    /* padding: 8rem 0; */
+    padding: 12rem 0;
 }
 
 .ms .title {
@@ -34,13 +51,13 @@ body {
 
 .ms .title h2 {
     font-size: 4rem;
-    font-weight: 800;
+    font-weight: 500;
     text-align: center;
 }
 
 .ms .title p {
     margin: 1.6rem 0 0 0;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     line-height: 2.4rem;
     font-weight: 400;
     text-align: center;

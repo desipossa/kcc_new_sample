@@ -1,4 +1,313 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header .hd_wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 10rem;
+
+    max-width: 160rem;
+    padding: 0 1.6rem;
+    margin: 0 auto;
+}
+
+.header .hd_wrap h1 {}
+
+.header .gnb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header .hd_wrap .util {
+    margin: 0 0 0 auto;
+}
+
+.header .hd_wrap .util i {
+    font-size: 2.4rem;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 3rem;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+.header .util a {
+    color: #fff;
+}
+
 .mainVisual {
+    position: relative;
     max-height: 100vh;
     overflow: hidden;
+}
+
+.mainVisual .main_visual_content .slg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    max-width: 132.2rem;
+    padding: 0 1.6rem;
+    width: 100%;
+}
+
+.mainVisual .main_visual_content .slg strong {
+    display: block;
+    font-size: 4.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 1.6rem 0;
+    text-shadow: 0 0 4px #000;
+}
+
+.mainVisual .main_visual_content .slg p {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    text-shadow: 0 0 4px #000;
+}
+
+.mainVisual .util {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12rem;
+    max-width: calc((100% - 129rem)/2 + 129rem);
+    width: 100%;
+    background: rgba(1, 64, 153, 0.9);
+    padding: 0 8rem;
+}
+
+.mainVisual .util .txt {
+    color: #fff;
+}
+
+.mainVisual .util .wheel {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    max-width: 129rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.mainVisual .util .dot {
+    position: relative;
+    padding: 0 0 0 6rem;
+}
+
+.mainVisual .util .dot::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    width: 3.2rem;
+    height: 4.6rem;
+    border: 2px solid #fff;
+    border-radius: 1.6rem;
+}
+
+.mainVisual .util .dot::after {
+    content: "";
+    position: absolute;
+    left: 1.5rem;
+    top: -4px;
+    height: 8px;
+    width: 2px;
+    background: #fff;
+
+    animation: dot 0.5s infinite;
+}
+
+
+@keyframes dot {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 4px);
+    }
+}
+
+.mainVisual .util .num {
+    color: #fff;
+}
+
+
+
+.mainVisual .util .controll {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+}
+
+.mainVisual .util .controll::before {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+.mainVisual .util .controll svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    overflow: visible;
+}
+
+/* stroke-dasharray : 선의 길이
+stroke-dashoffset : 선 사이 간격 */
+
+.mainVisual .util .controll svg circle {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+
+}
+
+.mainVisual .util .controll.on svg circle {
+    stroke-dashoffset: 0;
+    transition: 3s;
+}
+
+.mainBusiness .f_inner {
+    gap: 0.8rem;
+}
+
+.mainBusiness .itm {
+    position: relative;
+}
+
+.mainBusiness .itm::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 12rem;
+    width: 4rem;
+    height: 40px;
+    background: rgb(231, 0, 18);
+
+    transform: skew(-35deg) translate(10rem, -20rem);
+    opacity: 0;
+
+    box-shadow: 3rem 3rem 1.6rem rgba(0, 0, 0, 0.5);
+
+    transition: 0.5s;
+}
+
+.mainBusiness .itm:hover::after {
+    transform: skew(-35deg) translate(0, 0);
+    opacity: 1;
+}
+
+.mainBusiness .itm:nth-of-type(1)::after {
+    top: 12rem;
+}
+
+.mainBusiness .itm:nth-of-type(2)::after {
+    top: 24rem;
+}
+
+.mainBusiness .itm:nth-of-type(3)::after {
+    top: 8rem;
+}
+
+.mainBusiness .itm:nth-of-type(4)::after {
+    top: 10rem;
+}
+
+.mainBusiness .itm figure {
+    position: relative;
+    margin: 0 0 1.6rem 0;
+    overflow: hidden;
+}
+
+.mainBusiness .itm figure img {
+    transition: 0.5s;
+}
+
+.mainBusiness .itm:hover figure img {
+    transform: scale(1.2);
+}
+
+.mainBusiness .itm figure .txt {
+    position: absolute;
+    inset: 0 0 0 0;
+    background: rgba(1, 64, 153, 0.9);
+
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 4rem;
+
+    opacity: 0;
+
+    transition: 0.5s;
+}
+
+.mainBusiness .itm:hover figure .txt {
+    opacity: 1;
+}
+
+.mainBusiness .itm figure .txt h3 {
+    font-size: 3.2rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.mainBusiness .itm figure .txt p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.mainBusiness .itm strong {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
 }

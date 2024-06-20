@@ -11,7 +11,7 @@ $(function () {
             },
             allowTouchMove: false,
             autoplay: {
-                delay: 2000,
+                delay: 5000,
                 disableOnInteraction: false,
             },
             speed: 1,
@@ -29,6 +29,7 @@ $(function () {
                     $(`${slide}.ks .swiper-slide:not(.swiper-slide-active)`).find('.slide .bg').css({ width: 0 });
                     $(`${slide}.ks .swiper-slide:not(.swiper-slide-active)`).find('.slide').children().remove();
 
+                    $('.mainVisual .util .controll').removeClass('on')
                 },
                 slideChangeTransitionEnd: function () {
                     let index = this.realIndex;
@@ -55,6 +56,7 @@ $(function () {
                     });
 
                     current.addClass('on').siblings().removeClass('on');
+                    $('.mainVisual .util .controll').addClass('on')
 
                 }
             }
