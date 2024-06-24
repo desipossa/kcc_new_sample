@@ -473,34 +473,34 @@ stroke-dashoffset : 선 사이 간격 */
     background: var(--primary-color);
 }
 
-.mainNews .news_list li~li {
+.mainNews .l_list li~li {
     margin-top: 1.6rem;
 }
 
-.mainNews .news_list a .tit {
+.mainNews .l_list a .tit {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
 }
 
-.mainNews .news_list a .tit strong {
+.mainNews .l_list a .tit strong {
     font-size: 2.4rem;
-    font-weight: 200;
+    font-weight: 400;
 }
 
-.mainNews .news_list a .tit span {
+.mainNews .l_list a .tit span {
     font-size: 1.2rem;
     line-height: 1.6rem;
 }
 
-.mainNews .news_list a .cate {
+.mainNews .l_list a .cate {
     position: relative;
     padding: 0 4rem 0 0;
     font-size: 1.2rem;
     line-height: 1.6rem;
 }
 
-.mainNews .news_list a .cate::after {
+.mainNews .l_list a .cate::after {
     content: "";
     position: absolute;
     width: 13px;
@@ -560,12 +560,21 @@ stroke-dashoffset : 선 사이 간격 */
     margin: 0 auto;
 }
 
+.mainVideo .video_wrap .more {
+    float: right;
+    margin: -4rem 0 0 0;
+}
+
 
 .mainVideo .video_wrap .video {
     position: relative;
     height: 0;
     padding-bottom: 56.25%;
     background: #000;
+
+    margin: 1.6rem 0 4rem 0;
+
+    box-shadow: 0px 50px 40px -40px rgb(0, 0, 0, 0.75);
 }
 
 .mainVideo .video_wrap .video iframe {
@@ -574,4 +583,178 @@ stroke-dashoffset : 선 사이 간격 */
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.mainVideo .video_wrap .info {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.mainVideo .video_wrap .info .desc {
+    display: none;
+    position: absolute;
+    bottom: -4rem;
+    right: 0;
+
+    background: var(--white-color);
+    padding: 4.8rem;
+}
+
+
+.mainVideo .video_wrap .desc .txt_box {
+    max-height: 40rem;
+    max-height: 24rem;
+    padding: 0 4rem 0 0;
+    overflow-y: auto;
+}
+
+.mainVideo .video_wrap .desc .txt_box::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--background-color);
+}
+
+.mainVideo .video_wrap .desc .txt_box::-webkit-scrollbar-thumb {
+    background: var(--line-color);
+    border-radius: 4px;
+}
+
+.mainVideo .video_wrap .desc .close {
+
+    position: absolute;
+    top: 1.6rem;
+    right: 0.8rem;
+    width: 17px;
+    height: 17px;
+    background: url(../images/spr-common.png) -260px -82px no-repeat;
+    font-size: 0;
+
+}
+
+.mainRecrurt {
+    position: relative;
+}
+
+.mainRecrurt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 8rem;
+    background: var(--primary-color);
+}
+
+.mainRecrurt .inner {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.mainRecrurt .inner>* {
+    flex: 1;
+    background: #000;
+}
+
+.mainRecrurt .inner .left {
+    background: url(../images/recruit-left.jpg) no-repeat left top/cover;
+}
+
+
+.mainRecrurt .inner .right {
+    background: url(../images/recruit-right.jpg) no-repeat left top/cover;
+}
+
+
+.mainRecrurt .inner a {
+    display: block;
+    padding: 7.2rem 4.4rem 10.8rem 4.4rem;
+}
+
+.mainRecrurt .inner em {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--white-color);
+}
+
+.mainRecrurt .inner strong {
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--white-color);
+    margin-top: 1.6rem;
+}
+
+.mainRecrurt .inner p {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    margin-top: 2.4rem;
+    letter-spacing: -0.025em;
+}
+
+.mainCompany {
+    background: var(--background-color);
+}
+
+.mainCompany .l_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+}
+
+.mainCompany .l_list a {
+    height: 100%;
+}
+
+.mainCompany .l_list strong {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.mainCompany .l_list .con {
+    text-align: right;
+}
+
+.mainCompany .l_list em {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.footer {
+    background: var(--body-color);
+}
+
+.footer .ft {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+}
+
+.footer a {
+    color: var(--line-color);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    display: block;
+}
+
+.footer .link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+
+.footer .fb address {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--line-color);
+}
+
+.footer .fb p {
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    color: var(--line-color);
 }

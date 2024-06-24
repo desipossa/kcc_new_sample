@@ -9,7 +9,16 @@ $(function () {
         } else {
             $('.header').removeClass('on')
         }
-    })
+    });
+
+
+    $('.mainVideo .video_wrap .info .close').on('click', function () {
+        $('.mainVideo .info .desc').slideUp(1000, 'easeOutBounce');
+    });
+
+    $('.mainVideo .video_wrap .info .open').on('click', function () {
+        $('.mainVideo .info .desc').slideDown(1000, 'easeOutBounce');
+    });
 });
 
 

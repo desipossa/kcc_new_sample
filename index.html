@@ -19,6 +19,7 @@
     <script src="./js/jquery.fullpage.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="./js/jquery-ui.js"></script>
     <script src="./js/custom.js"></script>
 
 </head>
@@ -225,7 +226,7 @@
                 <h2>NEWS & NOTICE</h2>
             </div>
             <div class="inner">
-                <ul class="news_list">
+                <ul class="l_list">
                     <li>
                         <a href="">
                             <div class="tit">
@@ -279,7 +280,7 @@
             </div>
             <div class="inner">
                 <div class="video_wrap">
-                    <a href="">더보기</a>
+                    <a href="" class="more">더보기</a>
                     <div class="video">
                         <iframe src="https://www.youtube.com/embed/FQVzwLX9JKQ"
                             title="★MAKING FILM ★ 서울영상광고제 5년연속 수상기념 [문명의 충돌2- 신문명의 출현]" frameborder="0"
@@ -288,10 +289,9 @@
                     </div>
                     <div class="info">
                         <p>문명의 충돌2- 신문명의 출현 편_메이킹영상_151s </p>
-                        <button>제작의도</button>
+                        <button class="open">제작의도</button>
                         <div class="desc">
-                            <div class="txt scrollbar-inner">
-                                <p>
+                            <div class="txt_box">
                                 <p>스위첸 TVCF '문명의 충돌2- 신문명의 출현'&nbsp;</p>
                                 <p>서울영상광고제 5년연속 수상기념편 메이킹 필름 전격 공개!</p>
                                 <p><br></p>
@@ -304,18 +304,107 @@
                                 <p><br></p>
                                 <p>&lsquo;문명의 충돌2- 신문명의 출현&rsquo; 캠페인을 사랑해주신&nbsp;</p>
                                 <p>모든 분들께 진심으로, 깊이 감사드립니다!</p>
-                                </p>
                             </div>
-                            <button>close</button>
+                            <button class="close">close</button>
                         </div>
                     </div>
                 </div>
 
             </div>
+        </section>
+        <section class="mainRecrurt ms">
+            <div class="title">
+                <h2>RECRUIT</h2>
+            </div>
+            <div class="inner">
+                <div class="left">
+                    <a href="">
+                        <em>KCC TALENT</em>
+                        <strong>인재상</strong>
+                        <p>지식과 용기, 그리고 도전정신으로 무장한<br /> 당신이라면 KCC의 한사람이 될 수 있습니다.</p>
+                    </a>
+                </div>
+                <div class="right">
+                    <a href="">
+                        <em>JOB INTRODUCTION</em>
+                        <strong>직무소개</strong>
+                        <p>21세기 초일류 기업을 목표로 사업의 전문화를<br /> 추진하고 있는 KCC건설의 직무를 소개합니다.</p>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+        <section class="mainCompany ms">
+            <h2 class="blind">company info</h2>
+            <div class="inner">
+                <ul class="l_list">
+                    <li>
+                        <a href="/company/location.do" class="ui-border">
+                            <strong>대표전화</strong>
+                            <p class="con">
+                                <em>02-513-5500</em>
+                                <span>평일 : 09:00 ~ 17:30 / 토.일요일 : 휴무</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.switzen.com/customer/asInfo.do" target="_blank" class="ui-border">
+                            <strong>A/S안내</strong>
+                            <p class="con">
+                                <span>입주 후 A/S 신청에 대한 안내입니다</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/customer/faqList.do" class="ui-border">
+                            <strong>FAQ</strong>
+                            <p class="con">
+                                <span>고객님이 자주찾는 질문을<br> 간편하게 찾아보세요</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/customer/freeList.do" class="ui-border">
+                            <strong>고객게시판</strong>
+                            <p class="con">
+                                <span>KCC건설에 관련된 문의사항을<br>남겨주세요</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
     </main>
+    <footer class="footer ms">
+        <div class="ft inner">
+            <div class="link">
+                <a href="">이용약관</a>
+                <a href=""><strong>개인정보처리방침</strong></a>
+                <a href="">이메일주소무단수집거부</a>
+                <a href="mailto:kkconst@kccworld.net">Contact Us</a>
+                <a href="https://partner.kccworld.net/" target="_blank">전자조달시스템</a>
+                <a href="https://partner.kccworld.net/Common/EstablishedResult" target="_blank">기성실적조회</a>
+            </div>
+            <div class="site">
+                <button type="button" name="button">FAMILY SITE</button>
+                <ul class="site_lnk">
+                    <li><a href="https://www.switzen.com" target="_blank">스위첸</a></li>
+                    <li><a href="http://www.kccworld.co.kr" target="_blank">KCC</a></li>
+                    <li><a href="https://www.kccglass.co.kr" target="_blank">KCC글라스</a></li>
+                    <li><a href="https://www.kccsilicone.com" target="_blank">KCC실리콘</a></li>
+                    <li><a href="http://www.homecc.co.kr" target="_blank">홈씨씨인테리어</a></li>
+                    <li><a href="http://www.kccegis.com" target="_blank">이지스농구단</a></li>
+                    <li><a href="http://www.kccgolf.co.kr" target="_blank">금강레저</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fb inner">
+            <address>서울시 서초구 강남대로 587 (잠원동 27-8) 대표전화 : 02-513-5500</address>
+            <p class="copy">COPYRIGHT(C) 2019 KCC ENGINEERING & CONSTRUCTION CO., LTD. ALL RIGHT RESERVED.</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
