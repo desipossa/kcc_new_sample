@@ -144,6 +144,7 @@
     opacity: 0.5;
 }
 
+.header:hover .util .member a~a::before,
 .header.on .util .member a~a::before {
     background: #333;
 }
@@ -602,6 +603,31 @@ stroke-dashoffset : 선 사이 간격 */
     padding: 4.8rem;
 }
 
+.mainNews .l_list a .cate::after {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    right: 0;
+    background: url(../images/spr-common.png) -240px -82px no-repeat;
+}
+
+.mainVideo .video_wrap .info .open {
+    position: relative;
+    padding: 0 0 0 4rem;
+}
+
+.mainVideo .video_wrap .info .open::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+    top: -4px;
+    left: 0;
+    background: url(../images/spr-common.png) -238px -105px no-repeat;
+}
+
 
 .mainVideo .video_wrap .desc .txt_box {
     max-height: 40rem;
@@ -631,6 +657,8 @@ stroke-dashoffset : 선 사이 간격 */
     font-size: 0;
 
 }
+
+
 
 .mainRecrurt {
     position: relative;
@@ -756,6 +784,7 @@ stroke-dashoffset : 선 사이 간격 */
 }
 
 .footer .ft .site button {
+    position: relative;
     display: block;
     color: var(--line-color);
     height: 4rem;
@@ -764,7 +793,25 @@ stroke-dashoffset : 선 사이 간격 */
     text-align: left;
 }
 
+.footer .ft .site button::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+
+    top: 1.4rem;
+    right: 0.8rem;
+    background: url(../images/spr-footer.png) -8px 0;
+
+}
+
+.footer .ft .site button.on::after {
+    background: url(../images/spr-footer.png) 0 0;
+}
+
+
 .footer .ft .site .site_lnk {
+    display: none;
     position: absolute;
     top: 3.9rem;
     left: 0;
