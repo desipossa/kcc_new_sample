@@ -5,25 +5,49 @@ $(function () {
         let sct = $(window).scrollTop();
 
         if (sct > 0) {
-            $('.header').addClass('on')
+            $('#header').addClass('on')
         } else {
-            $('.header').removeClass('on')
+            $('#header').removeClass('on')
         }
     });
 
+});
 
-    $('.mainVideo .video_wrap .info .close').on('click', function () {
-        $('.mainVideo .info .desc').slideUp(1000, 'easeOutBounce');
+
+$(function () {
+    $('.mainPromotion  .open').on('click', function () {
+        $('.mainPromotion .desc').slideDown(1000, 'easeOutBounce');
     });
 
-    $('.mainVideo .video_wrap .info .open').on('click', function () {
-        $('.mainVideo .info .desc').slideDown(1000, 'easeOutBounce');
+    $('.mainPromotion .close').on('click', function () {
+        $('.mainPromotion .desc').slideUp(400, 'easeOutBounce');
     });
 
-
-    $('.footer .ft .site button').on('click', function () {
+    $('#footer .link .f_link').on('click', function () {
         $(this).toggleClass('on');
         $(this).next().toggle();
+    });
+
+    $('#footer .to_top a').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 1200)
+    })
+})
+
+
+$(function () {
+    const mainBusinessSlide = new Swiper('.mainBusinessSlide', {
+        slidesPerView: 1.2,
+        centeredSlides: true,
+        spaceBetween: 20,
+        loop: true,
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 8,
+                centeredSlides: false,
+            }
+        }
     })
 });
 
@@ -32,7 +56,7 @@ $(function () {
 
     mainVisualSlide('.main_slide', 'images/main_visual');
 
-
+    const targetName = ['MAKE A WONDERFUL WORLD', '김포 한강 2차 KCC스위첸', '동탄-수원 국도', 'KCC 대죽3공장']
 
     function mainVisualSlide(slide, bg) {
         const sl = new Swiper(slide, {
@@ -68,7 +92,12 @@ $(function () {
                 slideChangeTransitionEnd: function () {
                     let index = this.realIndex;
                     let total = this.slides.length;
-                    console.log(total)
+                    console.log(total);
+
+                    $('.mainVisual .util .txt').text(targetName[index]);
+                    $('.mainVisual .util .num span').text(index + 1);
+                    $('.mainVisual .util .num strong').text(total);
+
                     const current = $(`${slide}.ks .swiper-slide-active`);
                     const a = new Array(6);
 
