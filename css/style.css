@@ -608,14 +608,14 @@ stroke-dashoffset : 선 사이 간격 */
     max-width: 120rem;
 }
 
-.mainPromotion .movie {
+.mainPromotion .video_wrap {
     position: relative;
     background: var(--body-color);
     padding-bottom: 56.25%;
     box-shadow: 0px 3rem 6rem -3rem var(--body-color);
 }
 
-.mainPromotion .movie iframe {
+.mainPromotion .video_wrap iframe {
     position: absolute;
     top: 0;
     left: 0;
